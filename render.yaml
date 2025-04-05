@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: hosting-practice-backend
-    env: python
-    buildCommand: cd backend/backend && pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
-    startCommand: gunicorn backend.wsgi:application
-    plan: free
-    branch: main
-    repo: https://github.com/EDGE-GLOBAL-TECH/Hosting_Practice
